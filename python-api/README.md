@@ -1,8 +1,13 @@
-#### Create, use venv, install deps
+#### For test. Create, use venv, install deps
 ```
 python3 -m venv venv
 . venv/bin/activate
 pip3 install flask flask-restful
+```
+#### To build/run the image
+```
+docker build --tag python-docker-luc .
+docker run -d -p 5000:5000 python-docker
 ```
 
 ## flask API usage
@@ -30,3 +35,7 @@ curl -H 'Content-Type: application/json' http://localhost:5000/todos -d '{"task"
 ```
 curl -H 'Content-Type: application/json' http://localhost:5000/todos/todo3 -d '{"task":"something different"}' -X PUT
 ```
+
+#### Fuentes
+https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/
+https://flask-restful.readthedocs.io/en/latest/quickstart.html
