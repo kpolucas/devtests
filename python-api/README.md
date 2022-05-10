@@ -1,4 +1,11 @@
+#### Create, use venv, install deps
+```
+python3 -m venv venv
+. venv/bin/activate
+pip3 install flask flask-restful
+```
 
+## flask API usage
 #### To run api server
 ```
 python api.py
