@@ -7,7 +7,7 @@ pip3 install flask flask-restful
 #### To build/run the image
 ```
 docker build --tag python-docker-luc .
-docker run -d -p 5000:5000 python-docker
+docker run -d -p 5000:5000 python-docker-luc
 ```
 
 ## flask API usage
