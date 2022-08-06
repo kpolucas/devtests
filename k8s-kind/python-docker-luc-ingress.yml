@@ -1,0 +1,39 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: luc-app
+  labels:
+    app: luc
+spec:
+  containers:
+  - name: luc-app
+    image: python-docker-luc:0.1
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: luc-service
+spec:
+  selector:
+    app: luc
+  ports:
+  # Default port used by the image
+  - port: 5000
+---
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: example-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: luc-service
+            port:
+              number: 5000
+---
