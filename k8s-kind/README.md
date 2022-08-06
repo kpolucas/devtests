@@ -1,4 +1,4 @@
-# kind en linux
+### kind en linux
 ~~instalar go (https://go.dev/doc/install)~~  
 ~~setear profile go (https://www.digitalocean.com/community/tutorials/understanding-the-gopath)~~  
 instalar GO >=1.17 `aptitude install golang -t bullseye-backports`  
