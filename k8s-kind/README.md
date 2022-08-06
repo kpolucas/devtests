@@ -9,9 +9,11 @@ instalar kind (https://kind.sigs.k8s.io/)
 si se quiere, soporta multi nodes (https://www.youtube.com/watch?v=8Wjzpywdjyc)  
 
 ### Ingress con kind  
-Armo un cluster ingress-friendly (https://kind.sigs.k8s.io/docs/user/ingress/#create-cluster)  
-Cargo la imagen (previamente buildeada) python-docker-luc:0.1 al cluster (https://kind.sigs.k8s.io/docs/user/quick-start/#loading-an-image-into-your-cluster)  
-Deployo  
+Armado de cluster ingress-friendly (https://kind.sigs.k8s.io/docs/user/ingress/#create-cluster)  
+Cargar imagenes locales a kind (https://kind.sigs.k8s.io/docs/user/quick-start/#loading-an-image-into-your-cluster)  
+
+Deploy (necesita imagen python-docker-luc:$TAG) 
 `kubectl apply -f python-docker-luc-ingress.yml`  
-Proffit  
+Test
 `curl 127.0.0.1`  
+
